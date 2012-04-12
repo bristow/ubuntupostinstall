@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 #
 # Mon script de post installation Ubuntu 12.04 LTS
-#
+# Francisé par Bristow
 # Syntax: # sudo ./ubuntupostinstall-12.04.sh
 #
 # Nicolargo (aka) Nicolas Hennion
@@ -34,6 +34,9 @@ _APT_UPDATE = "DEBIAN_FRONTEND=noninteractive apt-get -y update"
 _APT_UPGRADE = "DEBIAN_FRONTEND=noninteractive apt-get -y upgrade"
 _APT_KEY = "apt-key adv --keyserver keyserver.ubuntu.com --recv-keys"
 _WGET = "wget"
+
+#Pouvoir installer des paquets DEB
+#_DPKG = "dpkg -i"
 
 # Classes
 #-----------------------------------------------------------------------------
@@ -243,7 +246,7 @@ def main(argv):
 	# Is it Precise Pangolin ?
 	_UBUNTU_VERSION = platform.linux_distribution()[2]
 	if (_UBUNTU_VERSION != "precise"):
-		showexec ("Script only for Ubuntu 12.04", "tpassousprecise", exitonerror = 1)
+		showexec ("Script seulement pour Ubuntu 12.04", "tpassousprecise", exitonerror = 1)
 	
 	# Read the configuration file
 	if (config_file == ""):
@@ -272,22 +275,22 @@ def main(argv):
 			pkg_list_others[item_type] = item_value
 
 	# Update repos
-	showexec ("Update repositories", _APT_UPDATE)
+	showexec ("Mise a jour des depots", _APT_UPDATE)
 	
 	# Upgrade system
-	showexec ("System upgrade (~20 mins, please be patient...)", _APT_UPGRADE)
+	showexec ("Mise a jour du systeme, soit patient...", _APT_UPGRADE)
 
 	# Parse and install packages
 	for pkg_type, pkg_list in config.items("packages"):
 		if (pkg_type.startswith("remove_")):
-		    showexec ("Remove packages "+pkg_type.lstrip("remove_"), _APT_REMOVE+" "+pkg_list)
+		    showexec ("Suppression de paquets"+pkg_type.lstrip("remove_"), _APT_REMOVE+" "+pkg_list)
 		else:
-		    showexec ("Install packages "+pkg_type, _APT_INSTALL+" "+pkg_list)
+		    showexec ("Installation de paquets"+pkg_type, _APT_INSTALL+" "+pkg_list)
 	
 	# Install packages related to repositories
 	#~ print pkg_list_others
 	for pkg in pkg_list_others.keys():
-		showexec ("Install packages "+pkg, _APT_INSTALL+" "+pkg_list_others[pkg])
+		showexec ("Installation de paquets"+pkg, _APT_INSTALL+" "+pkg_list_others[pkg])
 
 	# Allow user to read DVD (CSS)
 	showexec ("DVDs CSS encryption reader", "sh /usr/share/doc/libdvdread4/install-css.sh")
@@ -353,11 +356,11 @@ def main(argv):
 
 	# End of the script
 	print("---")
-	print("End of the script.")
-	print(" - Cfg file: "+config_file)
-	print(" - Log file: "+_LOG_FILE)
+	print("Fin du script.")
+	print(" - Cfg du fichier : "+config_file)
+	print(" - Log du Fichier : "+_LOG_FILE)
 	print("")
-	print("Please restart your session to complete.")
+	print("Merci de redemarrer la session pour terminer.")
 	print("---")
 
 # Main program
