@@ -260,7 +260,7 @@ def main(argv):
 
 	# Parse and exec pre-actions
 	for action_name, action_cmd in config.items("preactions"):
-		showexec ("Execute preaction "+action_name.lstrip("action_"), action_cmd)
+		showexec ("Execution de la preaction "+action_name.lstrip("action_"), action_cmd)
 	
 	# Parse and install repositories
 	pkg_list_others = {}
@@ -283,14 +283,14 @@ def main(argv):
 	# Parse and install packages
 	for pkg_type, pkg_list in config.items("packages"):
 		if (pkg_type.startswith("remove_")):
-		    showexec ("Suppression de paquets"+pkg_type.lstrip("remove_"), _APT_REMOVE+" "+pkg_list)
+		    showexec ("Suppression des paquets"+pkg_type.lstrip("remove_"), _APT_REMOVE+" "+pkg_list)
 		else:
-		    showexec ("Installation de paquets "+pkg_type, _APT_INSTALL+" "+pkg_list)
+		    showexec ("Installation des paquets "+pkg_type, _APT_INSTALL+" "+pkg_list)
 	
 	# Install packages related to repositories
 	#~ print pkg_list_others
 	for pkg in pkg_list_others.keys():
-		showexec ("Installation de paquets"+pkg, _APT_INSTALL+" "+pkg_list_others[pkg])
+		showexec ("Installation des paquets"+pkg, _APT_INSTALL+" "+pkg_list_others[pkg])
 
 	# Allow user to read DVD (CSS)
 	showexec ("DVDs CSS encryption reader", "sh /usr/share/doc/libdvdread4/install-css.sh")
