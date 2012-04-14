@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 #
 # Mon script de post installation Ubuntu 12.04 LTS
-# Francisé par Bristow
+# Francise par Bristow
 # Syntax: # sudo ./ubuntupostinstall-12.04.sh
 #
 # Nicolargo (aka) Nicolas Hennion
