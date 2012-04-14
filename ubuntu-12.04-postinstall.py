@@ -251,7 +251,7 @@ def main(argv):
 	# Read the configuration file
 	if (config_file == ""):
 		config_file = "/tmp/ubuntu-12.04-postinstall.cfg"
-		showexec ("Download the configuration file", "rm -f "+config_file+" ; "+_WGET+" -O "+config_file+" "+config_url)		
+		showexec ("Telechargement du fichier de configuration", "rm -f "+config_file+" ; "+_WGET+" -O "+config_file+" "+config_url)		
 	config = ConfigParser.RawConfigParser()
 	config.read(config_file)
 
@@ -266,11 +266,11 @@ def main(argv):
 	pkg_list_others = {}
 	for item_type, item_value in config.items("repos"):
 		if (item_type.startswith("ppa_")):
-			showexec ("Install repository "+item_type.lstrip("ppa_"), _APT_ADD+" "+item_value)
+			showexec ("Installation du depot "+item_type.lstrip("ppa_"), _APT_ADD+" "+item_value)
 		elif (item_type.startswith("url_")):
-			showexec ("Install repository "+item_type.lstrip("url_"), _APT_ADD+" \\\"deb "+item_value+"\\\"")
+			showexec ("Installation du depot "+item_type.lstrip("url_"), _APT_ADD+" \\\"deb "+item_value+"\\\"")
 		elif (item_type.startswith("key_")):
-			showexec ("Install key for the "+item_type.lstrip("key_")+" repository", _APT_KEY+" "+item_value)
+			showexec ("Installation de la cle pour le "+item_type.lstrip("key_")+" depot", _APT_KEY+" "+item_value)
 		elif (item_type.startswith("pkg_")):
 			pkg_list_others[item_type] = item_value
 
