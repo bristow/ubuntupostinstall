@@ -36,7 +36,9 @@ _APT_KEY = "apt-key adv --keyserver keyserver.ubuntu.com --recv-keys"
 _WGET = "wget"
 
 #Pouvoir installer des paquets DEB
-#_DPKG = "dpkg -i"
+#_DPKG_INSTALL = "dpkg -i"
+
+#Decompresser une archive zip
 
 # Classes
 #-----------------------------------------------------------------------------
