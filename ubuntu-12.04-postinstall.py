@@ -22,7 +22,7 @@ import os, sys, platform, getopt, shutil, logging, getpass, ConfigParser
 _VERSION="0.6b"
 _DEBUG = 1
 _LOG_FILE = "/tmp/ubuntu-12.04-postinstall.log"
-_CONF_FILE = "https://raw.github.com/bristow/ubuntupostinstall/blob/master/ubuntu-12.04-unity-postinstall.cfg"
+_CONF_FILE = "https://raw.github.com/bristow/ubuntupostinstall/master/ubuntu-12.04-unity-postinstall.cfg"
 
 # System commands
 #-----------------------------------------------------------------------------
