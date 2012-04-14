@@ -136,7 +136,7 @@ def showexec(description, command, exitonerror = 0, presskey = 0, waitmessage = 
 	if (presskey == 1):
 		status = "[ ENTER ]"
 	else:	
-		status = "[Running]"
+		status = "[En cours]"
 	statuscolor = colors.BLUE
 	sys.stdout.write (colors.NO + "%s" % waitmessage + statuscolor + "%s" % status.rjust(79-len(waitmessage)) + colors.NO)
 	sys.stdout.flush()
@@ -161,7 +161,7 @@ def showexec(description, command, exitonerror = 0, presskey = 0, waitmessage = 
 			status = "[Warning]"
 			statuscolor = colors.ORANGE
 		else:
-			status = "[ Error ]"
+			status = "[ Erreur ]"
 			statuscolor = colors.RED
 
 	sys.stdout.write (colors.NO + "\r%s" % description + statuscolor + "%s\n" % status.rjust(79-len(description)) + colors.NO)
@@ -285,7 +285,7 @@ def main(argv):
 		if (pkg_type.startswith("remove_")):
 		    showexec ("Suppression de paquets"+pkg_type.lstrip("remove_"), _APT_REMOVE+" "+pkg_list)
 		else:
-		    showexec ("Installation de paquets"+pkg_type, _APT_INSTALL+" "+pkg_list)
+		    showexec ("Installation de paquets "+pkg_type, _APT_INSTALL+" "+pkg_list)
 	
 	# Install packages related to repositories
 	#~ print pkg_list_others
