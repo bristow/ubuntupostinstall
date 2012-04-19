@@ -36,7 +36,7 @@ _APT_KEY = "apt-key adv --keyserver keyserver.ubuntu.com --recv-keys"
 _WGET = "wget"
 
 #Pouvoir installer des paquets DEB
-#_DPKG_INSTALL = "dpkg -i"
+_DPKG_INSTALL = "dpkg -i"
 
 #Decompresser une archive zip
 
@@ -264,7 +264,7 @@ def main(argv):
 	for action_name, action_cmd in config.items("preactions"):
 		showexec ("Execution de la preaction "+action_name.lstrip("action_"), action_cmd)
 	
-	# Parse and install repositories
+	# Parse and installation des depots
 	pkg_list_others = {}
 	for item_type, item_value in config.items("repos"):
 		if (item_type.startswith("ppa_")):
@@ -276,7 +276,7 @@ def main(argv):
 		elif (item_type.startswith("pkg_")):
 			pkg_list_others[item_type] = item_value
 
-	# Update repos
+	# Mise a jour des depots
 	showexec ("Mise a jour des depots", _APT_UPDATE)
 	
 	# Upgrade system
@@ -314,6 +314,16 @@ def main(argv):
 		# Htop
 		if (config.has_option("dotfiles", "htoprc")):
 			showexec ("Install the Htop configuration file", _WGET+" -O $HOME/.htoprc "+config.get("dotfiles", "htoprc"))
+
+	# Installation des paquets deb
+	if (config.has_section("debs")):
+		# TeamViewer
+		if (config.has_option("debs", "pkg_teamviever_64")):
+			showexec ("Telechargement de TeamViewer", _WGET+" -O /tmp/teamviewer.deb "+config.get("debs", "pkg_teamviever_64"))
+			showexec ("Installatio de TeamViewer", _DPKG_INSTALL+"/tmp/teamviewer.deb "))
+
+
+
 
 	# Gnome 3 configuration
 	if (config.has_section("gnome3")):
