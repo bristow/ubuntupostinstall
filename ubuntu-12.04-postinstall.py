@@ -319,8 +319,8 @@ def main(argv):
 	if (config.has_section("debs")):
 		# TeamViewer
 		if (config.has_option("debs", "pkg_teamviever_64")):
-			showexec ("Telechargement de TeamViewer", _WGET+" -O /tmp/teamviewer.deb "+config.get("debs", "pkg_teamviever_64"))
-			showexec ("Installatio de TeamViewer", _DPKG_INSTALL+" /tmp/teamviewer.deb ")
+			showexec ("Téléchargement de TeamViewer", _WGET+" -O /tmp/teamviewer.deb "+config.get("debs", "pkg_teamviever_64"))
+			showexec ("Installation de TeamViewer", _DPKG_INSTALL+" /tmp/teamviewer.deb ")
 
 
 
