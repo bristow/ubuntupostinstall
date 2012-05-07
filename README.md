@@ -18,7 +18,7 @@ The script can:
 
 Just download and run it with the following command lines:
 
-    $ wget https://raw.github.com/nicolargo/ubuntupostinstall/master/ubuntu-12.04-postinstall.py
+    $ wget https://raw.github.com/bristow/ubuntupostinstall/master/ubuntu-12.04-postinstall.py
     $ chmod a+x ubuntu-12.04-postinstall.py
     $ sudo ./ubuntu-12.04-postinstall.py
 
@@ -31,7 +31,7 @@ Using the -c option, you can select an alternative configuration file.
 
 For example, you can configure Ubuntu for Gnome Shell using:
 
-    $ sudo ./ubuntu-12.04-postinstall.py -c https://raw.github.com/nicolargo/ubuntupostinstall/master/ubuntu-12.04-gnomeshell-postinstall.cfg
+    $ sudo ./ubuntu-12.04-postinstall.py -c https://raw.github.com/bristow/ubuntupostinstall/master/ubuntu-12.04-gnomeshell-postinstall.cfg
 
 If you want to use a local confgiuration file (adapted to yours needs):
 
