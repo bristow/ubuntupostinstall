@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# Mon script de post installation Ubuntu 12.04 LTS
+# Mon script de post installation Ubuntu 14.04 LTS
 # Francise par Bristow
 # Syntax: # sudo ./ubuntupostinstall-12.04.sh
 #
@@ -11,7 +11,7 @@
 #
 
 """
-Post installation script for Ubuntu 12.04 LTS
+Post installation script for Ubuntu 14.04 LTS
 """
 
 import os, sys, platform, getopt, shutil, logging, getpass, ConfigParser
@@ -21,7 +21,7 @@ import os, sys, platform, getopt, shutil, logging, getpass, ConfigParser
 
 _VERSION="0.6b"
 _DEBUG = 1
-_LOG_FILE = "/tmp/ubuntu-12.04-postinstall.log"
+_LOG_FILE = "/tmp/ubuntu-14.04-postinstall.log"
 _CONF_FILE = "https://raw.github.com/bristow/ubuntupostinstall/master/ubuntu-12.04-unity-postinstall.cfg"
 
 # System commands
@@ -80,7 +80,7 @@ def syntax():
 	"""
 	Print the script syntax
 	"""
-	print "Ubuntu 12.04 post installation script version %s" % _VERSION
+	print "Ubuntu 14.04 post installation script version %s" % _VERSION
 	print ""
 	print "Syntax: ubuntu-12.04-postinstall.py [-c cfgfile] [-h] [-v]"
 	print "  -c cfgfile: Use the cfgfile instead of the default one"
@@ -89,14 +89,14 @@ def syntax():
 	print ""
 	print "Exemples:"
 	print ""
-	print " # ubuntu-12.04-postinstall.py"
+	print " # ubuntu-14.04-postinstall.py"
 	print " > Run the script with the default configuration file"
 	print "   %s" % _CONF_FILE
 	print ""
-	print " # ubuntu-12.04-postinstall.py -c ./myconf.cfg"
+	print " # ubuntu-14.04-postinstall.py -c ./myconf.cfg"
 	print " > Run the script with the ./myconf.cfg file"
 	print ""
-	print " # ubuntu-12.04-postinstall.py -c http://mysite.com/myconf.cfg"
+	print " # ubuntu-14.04-postinstall.py -c http://mysite.com/myconf.cfg"
 	print " > Run the script with the http://mysite.com/myconf.cfg configuration file"
 	print ""
 
