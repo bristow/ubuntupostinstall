@@ -3,7 +3,7 @@
 #
 # Mon script de post installation Ubuntu 14.04 LTS
 # Francise par Bristow
-# Syntax: # sudo ./ubuntupostinstall-12.04.sh
+# Syntax: # sudo ./ubuntu-14.04-postinstall.py
 #
 # Nicolargo (aka) Nicolas Hennion
 # http://www.nicolargo.com
