@@ -365,7 +365,7 @@ def main(argv):
 		#if (config.has_option("unity", "conky")):
 		#	showexec ("Install the Conky configuration file", _WGET+" -O $HOME/.conkyrc "+config.get("unity", "conky"))
 		# Unity is the default UI
-		#showexec ("Unity is now the default shell", "/usr/lib/lightdm/lightdm-set-defaults -s unity-3d")
+		showexec ("Unity is now the default shell", "/usr/lib/lightdm/lightdm-set-defaults -s unity-3d")
 
 	# Parse and exec post-actions
 	for action_name, action_cmd in config.items("postactions"):
