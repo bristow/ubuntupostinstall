@@ -351,7 +351,7 @@ def main(argv):
 		showexec ("Gnome Shell is now the default shell", "/usr/lib/lightdm/lightdm-set-defaults -s gnome-shell")
 
 	# Unity configuration
-	if (config.has_section("unity")):
+	#if (config.has_section("unity")):
 		# Set the default theme
 		#if (config.has_option("unity", "theme")):
 			#showexec ("Set the default Unity theme to "+config.get("unity", "theme"), "gsettings set org.gnome.desktop.interface gtk-theme "+config.get("unity", "theme"))
@@ -365,11 +365,11 @@ def main(argv):
 		#if (config.has_option("unity", "conky")):
 		#	showexec ("Install the Conky configuration file", _WGET+" -O $HOME/.conkyrc "+config.get("unity", "conky"))
 		# Unity is the default UI
-		showexec ("Unity is now the default shell", "/usr/lib/lightdm/lightdm-set-defaults -s unity-3d")
+		#showexec ("Unity is now the default shell", "/usr/lib/lightdm/lightdm-set-defaults -s unity-3d")
 
 	# Parse and exec post-actions
 	for action_name, action_cmd in config.items("postactions"):
-		showexec ("Execute postaction "+action_name.lstrip("action_"), action_cmd)
+			showexec ("Execute postaction "+action_name.lstrip("action_"), action_cmd)
 
 	# End of the script
 	print("---")
