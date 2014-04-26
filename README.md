@@ -1,10 +1,11 @@
 ===============================
-Ubuntu post-installation script
+Script de post-installation pour Ubuntu
 ===============================
 
-With this Python script you will avoid wasting time to install and 
-configure your Ubuntu 12.04 operating system. Just download this script, 
-run it with your favorite configuration file and ... envoy !
+Avec ce script Python (forké depuis nicolargo/ubuntupostinstall),
+vous ne perdrez plus de temps pour installer les versions LTS d'Ubuntu.
+
+Le script est un peu simplifié par rapport à l'original.
 
 The script can:
 
@@ -14,16 +15,15 @@ The script can:
 * Configure the user interface (support Unity and Gnome Shell)
 * Run every command line
 
-## How to use this script ?
+## Comment utiliser ce script ?
 
-Just download and run it with the following command lines:
-
-    $ wget https://raw.github.com/bristow/ubuntupostinstall/master/ubuntu-12.04-postinstall.py
-    $ chmod a+x ubuntu-12.04-postinstall.py
-    $ sudo ./ubuntu-12.04-postinstall.py
+Il suffit de télécharger et exécuter en utilisant ces commandes :
+    $ wget https://raw.github.com/bristow/ubuntupostinstall/master/ubuntu-14.04-postinstall.py
+    $ chmod a+x ubuntu-14.04-postinstall.py
+    $ sudo ./ubuntu-14.04-postinstall.py
 
 By default, the script will download and use this configuration file.
-https://github.com/nicolargo/ubuntupostinstall/blob/master/ubuntu-12.04-unity-postinstall.cfg
+https://github.com/bristow/ubuntupostinstall/blob/master/ubuntu-14.04-unity-postinstall.cfg
 
 ## Use anothers configurations files
 
