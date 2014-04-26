@@ -321,8 +321,8 @@ def main(argv):
 	# Installation des paquets deb
 	if (config.has_section("debs")):
 		# TeamViewer
-		if (config.has_option("debs", "pkg_teamviever_64")):
-			showexec ("Téléchargement de TeamViewer", _WGET+" -O /tmp/teamviewer.deb "+config.get("debs", "pkg_teamviever_64"))
+		if (config.has_option("debs", "pkg_teamviewer")):
+			showexec ("Téléchargement de TeamViewer", _WGET+" -O /tmp/teamviewer.deb "+config.get("debs", "pkg_teamviewer"))
 			showexec ("Installation de TeamViewer", _DPKG_INSTALL+" /tmp/teamviewer.deb ")
 		# Skype
 		if (config.has_option("debs", "pkg_skype")):
