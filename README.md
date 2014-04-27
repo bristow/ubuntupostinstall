@@ -7,27 +7,30 @@ vous ne perdrez plus de temps pour installer les versions LTS d'Ubuntu.
 
 Le script est un peu simplifié par rapport à l'original.
 
-The script can:
+Le script peut :
 
-* Install Ubuntu repositories (deb repos, PPA, ...)
-* Install packages
-* Configure dots files (.bashrc, .vimrc, ...)
-* Configure the user interface (support Unity and Gnome Shell)
-* Run every command line
+* Installer des dépots Ubuntu (deb repos, PPA, ...)
+* Installer des paquets logiciels
+* Configurer des fichiers personnalisés (.bashrc, .vimrc, ...)
+* Configurer éventuellement l'interface utilisateur (Unity et Gnome Shell)
+* Lancer des commandes
+* J'ai rajouter aussi une section debs qui permet de télécharger des debs et de les installer (skype, teamviewer...)
 
 ## Comment utiliser ce script ?
 
 Il suffit de télécharger et exécuter en utilisant ces commandes :
+
     $ wget https://raw.github.com/bristow/ubuntupostinstall/master/ubuntu-14.04-postinstall.py
     $ chmod a+x ubuntu-14.04-postinstall.py
     $ sudo ./ubuntu-14.04-postinstall.py
 
-By default, the script will download and use this configuration file.
+Par défaut, ce script utilise et télécharge ce fichier de conf :
+
 https://github.com/bristow/ubuntupostinstall/blob/master/ubuntu-14.04-unity-postinstall.cfg
 
-## Use anothers configurations files
+## On peut utiliser un autre fichier de conf si besoin
 
-Using the -c option, you can select an alternative configuration file.
+utilisation de l'option -c, ce qui permet de sélectionner un autre fichier de conf.
 
 For example, you can configure Ubuntu for Gnome Shell using:
 
