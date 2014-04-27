@@ -14,7 +14,7 @@ Le script peut :
 * Configurer des fichiers personnalisés (.bashrc, .vimrc, ...)
 * Configurer éventuellement l'interface utilisateur (Unity et Gnome Shell)
 * Lancer des commandes
-* J'ai rajouter aussi une section debs qui permet de télécharger des debs et de les installer (skype, teamviewer...)
+* J'ai rajouté aussi une section debs qui permet de télécharger des debs et de les installer (skype, teamviewer...)
 
 ## Comment utiliser ce script ?
 
@@ -30,20 +30,19 @@ https://github.com/bristow/ubuntupostinstall/blob/master/ubuntu-14.04-unity-post
 
 ## On peut utiliser un autre fichier de conf si besoin
 
-utilisation de l'option -c, ce qui permet de sélectionner un autre fichier de conf.
+Utilisation de l'option -c, ce qui permet de sélectionner un autre fichier de conf.
 
-For example, you can configure Ubuntu for Gnome Shell using:
+Par exemple, on peut utiliser le fichier de conf suivant pour gnomeshell :
 
-    $ sudo ./ubuntu-12.04-postinstall.py -c https://raw.github.com/bristow/ubuntupostinstall/master/ubuntu-12.04-gnomeshell-postinstall.cfg
+    $ sudo ./ubuntu-14.04-postinstall.py -c https://raw.github.com/bristow/ubuntupostinstall/master/ubuntu-14.04-gnomeshell-postinstall.cfg
 
-If you want to use a local confgiuration file (adapted to yours needs):
+Si vous voulez utiliser un fichier de conf local (adapté à vos besoins):
 
-    $ sudo ./ubuntu-12.04-postinstall.py -c mycfg.cfg
+    $ sudo ./ubuntu-14.04-postinstall.py -c mycfg.cfg
 
-## Create your own configuration file
+## Créer votre propre fichier de configuration
 
-The configuration files is organized into sections, and each section 
-can contain name-value pairs for configuration data.
+Le fichier de configuration est organisé en section.
 
 ### preactions section
 
@@ -168,10 +167,10 @@ Example:
 The dummy action will create a /tmp/pkg-before.txt with a listing of 
 all the packages installed on your system after the script execution.
 
-## Contribute ?
+## Contribuer ?
 
-Need a new function ? 
+Besoin d'une nouvelle fonction ? 
 
-Found a bug ?
+Bug trouvé ?
 
-Please fill an issue here: https://github.com/nicolargo/ubuntupostinstall/issues/new
+Remplir une issue ici : https://github.com/nicolargo/ubuntupostinstall/issues/new
